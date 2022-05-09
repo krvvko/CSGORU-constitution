@@ -58,6 +58,7 @@ main {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    margin: 0 5%;
 }
 
 p {
@@ -66,7 +67,8 @@ p {
 }
 
 .main-middle-container {
-    width: 70vh;
+    max-width: 70%;
+    margin-left: 20%;
 }
 
 .main-left-container {
@@ -76,7 +78,8 @@ p {
     justify-content: center;
     gap: 20px;
     height: 100vh;
-    max-width: 300px;
+    max-width: 18%;
+
 }
 
 .main-element {
@@ -163,6 +166,7 @@ h2::before {
     }
     .main-middle-container {
         max-width: 100%;
+        margin: 0;
     }
     h2 {
         font-size: 40px;
