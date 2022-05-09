@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+/*
 :root {
     --text-block-bg-color: #171717;
     --main-bg-color: #000000;
@@ -8,6 +9,30 @@
     --chat-color: #3b5af5;
     --user-color: #f5a43b;
     --user-admin-color: #f5733b;
+}
+*/
+.theme-light {
+    --text-block-bg-color: #9f9f9f;
+    --main-bg-color: #eaeaea;
+    --headline-color: #101010;
+    --main-text-color: #383838;
+    --rule-color: #ff3535;
+    --chat-color: #3b5af5;
+    --user-color: #f5a43b;
+    --user-admin-color: #f5733b;
+    --switcher-content: "🌑";
+}
+
+.theme-dark {
+    --text-block-bg-color: #171717;
+    --main-bg-color: #000000;
+    --headline-color: #ddd;
+    --main-text-color: #9f9f9f;
+    --rule-color: #ff3535;
+    --chat-color: #3b5af5;
+    --user-color: #f5a43b;
+    --user-admin-color: #f5733b;
+    --switcher-content: "☀️";
 }
 
 html {
@@ -143,6 +168,30 @@ h2::before {
 /* Handle */
 ::-webkit-scrollbar-thumb {
     background: var(--text-block-bg-color);
+}
+
+.switcher {
+    box-shadow: none;
+    color: var(--headline-color);
+    background-color: var(--main-bg-color);
+    content: var(--switcher-content);
+    border: 2px var(--headline-color) solid;
+    border-radius: 3px;
+    padding: 2px 7px;
+    cursor: pointer;
+    width: auto;
+    height: auto;
+    transition-duration: 0.1s;
+}
+
+.left-left {
+    display: flex;
+    justify-content: space-around;
+}
+
+.switcher:hover {
+    background-color: var(--headline-color);
+    color: var(--main-bg-color);
 }
 
 @media (orientation: portrait) {

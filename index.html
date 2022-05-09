@@ -31,6 +31,12 @@
             <span class="span-before">Голосовые каналы:</span>
             <a href="#4.1-4.2" class="link-hover">4.1 и 4.2 - Помехи в голосовых каналах и Трансляция громких звуков</a>
             <a href="#4.5" class="link-hover">4.5 - Препятствие нормальной игре</a>
+            <span class="span-before">Полезные ссылки:</span>
+            <div class="left-left">
+                <a class="switcher" onclick="toggleTheme()"> <span>тема</span> </a>
+                <a class="switcher" target="_blank" href="https://docs.google.com/spreadsheets/d/1s_yJTZNRoqYUWLBfGdC5JtddCW46j5BmuszGyQlTj0A/edit#gid=0"> <span>наказания</span> </a>
+                <a class="switcher" target="_blank" href="https://docs.google.com/spreadsheets/d/1ekLKaN_tCTk6bEj9ki5h_XB96DcswiEnxperliifLFA/edit#gid=691737256"> <span>отчеты</span> </a>
+            </div>
         </div>
     </div>
     <div class="main-middle-container main-element">
@@ -244,6 +250,31 @@
         <br>
     </div>
     <div class="main-element"></div>
+
+    <script>
+        // function to set a given theme/color-scheme
+        function setTheme(themeName) {
+            localStorage.setItem('theme', themeName);
+            document.documentElement.className = themeName;
+        }
+        // function to toggle between light and dark theme
+        function toggleTheme() {
+            if (localStorage.getItem('theme') === 'theme-dark'){
+                setTheme('theme-light');
+            } else {
+                setTheme('theme-dark');
+            }
+        }
+        // Immediately invoked function to set the theme on initial load
+        (function () {
+            if (localStorage.getItem('theme') === 'theme-dark') {
+                setTheme('theme-dark');
+            } else {
+                setTheme('theme-light');
+            }
+        })();
+    </script>
+
 </main>
 
 </body>
