@@ -127,6 +127,21 @@ h2::before {
     display: none;
 }
 
+/* width */
+::-webkit-scrollbar {
+    width: 13px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: none;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--text-block-bg-color);
+}
+
 @media (orientation: portrait) {
     main {
         flex-direction: column;
